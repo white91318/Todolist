@@ -4,6 +4,7 @@ import logo from './logo.svg';
 import './App.scss';
 import addIcon from './add.png';
 import { render } from '@testing-library/react';
+import xIcon from './x-symbol.png'
 
 class AddItem extends Component{
     constructor(props) {
@@ -22,16 +23,21 @@ class AddItem extends Component{
         this.props.add(this.state.todoText);
         // 如何將資料新增到TodoItems中?  
     }
+    close =()=>{
+        document.getElementById("add-form").style.visibility = "hidden";
+    }
     render(){
         return(
         <div>
-            {/* <img className="add-item" src={addIcon} onClick={this.add}></img> */}
+            <div className="add-title">新增代辦事項</div>
             <input type="text" 
-                
+                className="add-input-box"
                 value={this.state.todoText} 
                     onChange={this.handleTodoChange}/>
                 <button
-                    onClick={this.handleAddTodoItem}>Add Todo Item</button>
+                    className="add-btn"
+                    onClick={this.handleAddTodoItem}>新增</button>
+            <img src={xIcon} className="add-close-btn" onClick={this.close}/>        
         </div>
 
                     

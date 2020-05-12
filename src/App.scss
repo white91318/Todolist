@@ -95,4 +95,55 @@
 } 
 .add-form {
   visibility: hidden;
+  left: 50%;
+  top: 50%;
+  visibility: hidden;
+  position: absolute;
+  width: 600px;
+  height: 150px;
+  margin: -75px 0 0 -300px;
+  background: #D1E9E9;
+  border-radius: 10px;
+  padding: 20px;
+  box-sizing: border-box;
+  filter: drop-shadow(20px 20px 7px rgba(0, 0, 0, 0.7));
+}
+.add-title {
+  font-size: 30px;
+  font-weight: bold;
+  color: #336666;
+  line-height:  50px;
+}
+.add-input-box {
+  background-color: transparent;
+  border: none;
+  border-bottom: #4F9D9D 2px solid;
+  width: 400px;
+  font-size: 20px;
+  position: absolute;
+  bottom: 20px;
+  &:focus {
+    border-bottom: #336666 2px solid;
+    outline: none;
+    -webkit-box-shadow: inset 000rgba(0,0,0,.075),000#333;
+    box-shadow: inset000rgba(0,0,0,.075),000#333;
+
+  }
+}
+.add-btn {
+  position: absolute;
+  bottom: 20px;
+  right: 50px;
+  background-color: cadetblue;
+  height: 50px;
+  border: none;
+  width: 70px;
+}
+.add-close-btn {
+  width: 15px;
+  width: 15px;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  cursor: pointer;
 }

@@ -8,7 +8,7 @@ import Item from './Item'
 class Card extends Component{
     render(){
     let display = this.props.display.map((x)=>{
-       return <Item key={x.id} item={x.data}></Item>
+       return <Item id={x} item={x.data}></Item>
     })
     
     
