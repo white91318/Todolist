@@ -6,9 +6,13 @@ import { render } from '@testing-library/react';
 import Item from './Item'
 
 class Card extends Component{
+    getIndex =(data) =>{
+        console.log("FromChild",data)
+        this.props.getIndex(data)
+    }
     render(){
-    let display = this.props.display.map((x)=>{
-       return <Item id={x} item={x.data}></Item>
+    let display = this.props.display.map(x=>{
+       return <Item id={x.id} item={x.data} status={this.props.status} getIndex={this.getIndex}></Item>
     })
     
     
