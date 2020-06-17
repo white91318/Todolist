@@ -25,6 +25,8 @@ class AddItem extends Component{
     }
     close =()=>{
         document.getElementById("add-form").style.visibility = "hidden";
+        var listView = document.getElementById("card")
+        listView.style.filter ="none"
     }
     render(){
         return(
